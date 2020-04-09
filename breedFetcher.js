@@ -12,7 +12,7 @@ const fetchBreedDescription = function(breedName, callback) {
     const data = JSON.parse(body);
     
     if (data[0] === undefined) {
-      callback("Cat name is not describe");
+      callback(null,"Cat name is not in our directory. try again.");
     } else {
       callback(null, data[0].description);
     }
